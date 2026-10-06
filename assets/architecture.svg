@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 344" width="960" height="344" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="960" height="344" rx="14" fill="#0d1117"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8b5cf6"/></marker></defs>
+<text x="165" y="44" fill="#8b949e" font-size="13" text-anchor="middle" letter-spacing="2">INPUTS</text>
+<rect x="40" y="70.0" width="250" height="58" rx="9" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+<text x="165" y="104.0" fill="#e6edf3" font-size="14" text-anchor="middle">Task text from the operator</text>
+<rect x="40" y="144.0" width="250" height="58" rx="9" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+<text x="165" y="169.5" fill="#e6edf3" font-size="14" text-anchor="middle">Agent spec (YAML): tools,</text>
+<text x="165" y="186.5" fill="#e6edf3" font-size="14" text-anchor="middle">targets, guardrails</text>
+<rect x="40" y="218.0" width="250" height="58" rx="9" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+<text x="165" y="243.5" fill="#e6edf3" font-size="14" text-anchor="middle">Runtime policy: dry run,</text>
+<text x="165" y="260.5" fill="#e6edf3" font-size="14" text-anchor="middle">posting gate</text>
+<text x="480" y="44" fill="#8b949e" font-size="13" text-anchor="middle" letter-spacing="2">CORE</text>
+<rect x="355" y="70.0" width="250" height="58" rx="9" fill="#1b1630" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="480" y="95.5" fill="#e6edf3" font-size="14" text-anchor="middle">Pre-flight: resolve and</text>
+<text x="480" y="112.5" fill="#e6edf3" font-size="14" text-anchor="middle">launch desktop targets</text>
+<rect x="355" y="144.0" width="250" height="58" rx="9" fill="#1b1630" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="480" y="169.5" fill="#e6edf3" font-size="14" text-anchor="middle">Agent loop on the Hermes</text>
+<text x="480" y="186.5" fill="#e6edf3" font-size="14" text-anchor="middle">runtime</text>
+<rect x="355" y="218.0" width="250" height="58" rx="9" fill="#1b1630" stroke="#8b5cf6" stroke-width="1.5"/>
+<text x="480" y="243.5" fill="#e6edf3" font-size="14" text-anchor="middle">Computer-use driver (UI</text>
+<text x="480" y="260.5" fill="#e6edf3" font-size="14" text-anchor="middle">Automation + screen capture)</text>
+<text x="795" y="44" fill="#8b949e" font-size="13" text-anchor="middle" letter-spacing="2">OUTPUTS</text>
+<rect x="670" y="70.0" width="250" height="58" rx="9" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+<text x="795" y="95.5" fill="#e6edf3" font-size="14" text-anchor="middle">Clip file, tags and</text>
+<text x="795" y="112.5" fill="#e6edf3" font-size="14" text-anchor="middle">description</text>
+<rect x="670" y="144.0" width="250" height="58" rx="9" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+<text x="795" y="178.0" fill="#e6edf3" font-size="14" text-anchor="middle">Run trace per session</text>
+<rect x="670" y="218.0" width="250" height="58" rx="9" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+<text x="795" y="243.5" fill="#e6edf3" font-size="14" text-anchor="middle">Layout report when a step is</text>
+<text x="795" y="260.5" fill="#e6edf3" font-size="14" text-anchor="middle">blocked</text>
+<path d="M290,99.0 C340,99.0 305,173.0 351,173.0" stroke="#8b5cf6" stroke-opacity=".7" fill="none" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M290,173.0 C340,173.0 305,173.0 351,173.0" stroke="#8b5cf6" stroke-opacity=".7" fill="none" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M290,247.0 C340,247.0 305,173.0 351,173.0" stroke="#8b5cf6" stroke-opacity=".7" fill="none" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M605,173.0 C655,173.0 620,99.0 666,99.0" stroke="#8b5cf6" stroke-opacity=".7" fill="none" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M605,173.0 C655,173.0 620,173.0 666,173.0" stroke="#8b5cf6" stroke-opacity=".7" fill="none" stroke-width="1.6" marker-end="url(#a)"/>
+<path d="M605,173.0 C655,173.0 620,247.0 666,247.0" stroke="#8b5cf6" stroke-opacity=".7" fill="none" stroke-width="1.6" marker-end="url(#a)"/>
+</svg>

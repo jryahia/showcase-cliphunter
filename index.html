@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClipHunter | Case Study</title>
+<meta name="description" content="Computer-use agent that operates a desktop video app end to end: finds a source, drives the app&#x27;s real UI, and stops at a hard posting gate.">
+<style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--fg:#e6edf3;--mut:#8b949e;--acc:#8b5cf6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 "Segoe UI",Helvetica,Arial,sans-serif}
+main{max-width:1040px;margin:0 auto;padding:56px 16px 80px}
+a{color:var(--acc)}h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:0 0 12px}
+h2{font-size:22px;margin:56px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--acc);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+.lead{font-size:19px;color:var(--mut);max-width:760px}
+.note{border:1px solid var(--line);border-left:4px solid var(--acc);background:var(--card);padding:14px 18px;border-radius:8px;margin:28px 0}
+.hero{width:100%;border-radius:12px;border:1px solid var(--line);margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);background:var(--card);padding:5px 12px;border-radius:999px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;padding:0;list-style:none}
+.grid li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+ol li{margin:6px 0}.arch{width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+figure{margin:0 0 28px}figure img{width:100%;border-radius:10px;border:1px solid var(--line)}
+figcaption{color:var(--mut);font-size:14px;margin-top:6px}
+footer{margin-top:64px;color:var(--mut);font-size:14px;border-top:1px solid var(--line);padding-top:20px}
+</style></head><body><main>
+<div class="kicker">Case study &middot; Private project</div>
+<h1>ClipHunter</h1>
+<p class="lead">Computer-use agent that operates a desktop video app end to end: finds a source, drives the app&#x27;s real UI, and stops at a hard posting gate.</p>
+<div class="note"><strong>This is a proprietary project. Source code is private. This page showcases the system&#x27;s architecture and capabilities.</strong></div>
+<p><strong>Status:</strong> Prototype. Runs in dry-run mode, which halts before any publishing step.</p>
+<h2>Problem it solves</h2><p>Clip Agent Pro has no public API for its full workflow, and much of the clipping pipeline lives behind a desktop UI. ClipHunter treats that UI as the integration surface: an agent reads the live window through accessibility data and screenshots, acts on numbered elements rather than guessed pixel positions, and records every step it took. Publishing is blocked by configuration until a human turns it on.</p>
+<h2>Architecture</h2><img class="arch" src="assets/architecture.svg" alt="Architecture diagram"><ol><li>The launcher reads the agent spec, resolves the desktop app and browser executables, and refuses to start if a required target is missing.</li><li>The agent searches for one source video and returns its URL.</li><li>It opens the desktop app, reads the window as a numbered element tree plus screenshot, and pastes, scrolls and clicks by element index.</li><li>Every state-changing action is re-captured to confirm it landed; two failed attempts end the run with a written layout report.</li><li>Posting steps run only when dry run is off and posting is explicitly enabled.</li></ol>
+<h2>Key features</h2><ul class="grid"><li>Accessibility-tree targeting instead of fixed screen coordinates</li><li>Verify-after-act loop on every state-changing action</li><li>Hard posting gate: two independent config flags must both allow it</li><li>Pre-boot gate that resolves executables from an ordered candidate list</li><li>Per-run trace logs and a structured layout report on failure</li><li>Self-test and tree commands for checking the setup without running the agent</li></ul>
+<h2>Tech stack</h2><ul class="chips"><li>Python</li><li>Hermes Agent</li><li>cua-driver</li><li>Windows UI Automation</li><li>YAML</li></ul>
+<h2>What it does in practice</h2><ul><li>Turns a manual click-through of a desktop app into a scripted, logged agent run.</li><li>When the UI changes or a control is unreachable, the run stops and explains where, instead of clicking blind.</li></ul>
+<footer>Built by <a href="https://github.com/jryahia">Yahya Jarray</a> &middot;
+<a href="mailto:yahiajarray43@gmail.com">yahiajarray43@gmail.com</a> &middot;
+<a href="https://github.com/jryahia/showcase-cliphunter">Repository</a><br>This repository contains no source code. It is a case study for a proprietary project. &copy; Yahya Jarray.</footer>
+</main></body></html>
